@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import fetchAllProducts from '../utilities/fetch';
 import Card from '../components/card';
+import Button from '../components/button';
 
 function Home() {
     const [loading, setLoading] = useState(true);
@@ -53,11 +54,18 @@ function Home() {
                 <Card
                     key={product.id}
                     title={product.title}
-                    button={
+                    buttonAdd={
                         <Button
                             label="Add to cart"
                             color="amber"
                             onClick={() => handleAddToCart(product)}
+                        />
+                    }
+                    buttonRemove={
+                        <Button
+                            label="Remove from cart"
+                            color="amber"
+                            onClick={() => handleRemoveFromCart(product)}
                         />
                     }
                 />
