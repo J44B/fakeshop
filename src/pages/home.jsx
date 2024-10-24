@@ -1,5 +1,5 @@
-function Cart() {
+function Home() {
     return <h1>This is my Home</h1>;
 }
 
-export default Cart;
+export default Home;
