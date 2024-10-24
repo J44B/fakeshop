@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import fetchAllProducts from '../utilities/fetch';
+import Card from '../components/card';
 
 function Home() {
     const [loading, setLoading] = useState(true);
