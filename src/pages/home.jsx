@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useOutletContext } from 'react-router-dom';
 import fetchAllProducts from '../utilities/fetch';
+import addToCart from '../utilities/addToCart';
+import removeFromCart from '../utilities/addToCart';
 import Card from '../components/card';
 import Button from '../components/button';
 
@@ -58,14 +59,14 @@ function Home() {
                         <Button
                             label="Add to cart"
                             color="amber"
-                            onClick={() => handleAddToCart(product)}
+                            onClick={() => addToCart(product)}
                         />
                     }
                     buttonRemove={
                         <Button
                             label="Remove from cart"
                             color="amber"
-                            onClick={() => handleRemoveFromCart(product)}
+                            onClick={() => removeFromCart(product)}
                         />
                     }
                 />
